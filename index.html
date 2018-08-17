@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Song Demo</title>
+	<meta name="description" content="Integrate Twitter comments rather than hosting your own!">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="styles.css">
+	
+	<!--Favicons-->
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/favicons/manifest.json">
+	<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/favicons/favicon.ico">
+	<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<header>
+	<nav>
+		<span><img class="svg-inline" src="design-files/logo.svg"></span>
+		<a href="https://github.com/joshpowlison/song"><p>Github</p></a>
+		<a href="https://github.com/joshpowlison/song/tree/develop"><p>Dev Branch</p></a>
+	</nav>
+</header>
+<main>
+
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script src="song/script.js"></script>
+<link rel="stylesheet" href="song/styles.css">
+
+<h1><img class="svg-inline" src="design-files/logo.svg"> Song</h1>
+
+<p id="intro">Integrate Twitter comments rather than hosting your own!</p>
+
+<div id="test-window"></div>
+
+<script>
+new Song({
+	window:document.getElementById('test-window')
+	,comments:[
+		{
+			service:'twitter'
+			,id:'515490786800963584'
+			,place:'50% 70%'
+		}
+		,{
+			service:'twitter'
+			,id:'962773755033505793'
+			,place:'15% 20%'
+		}
+		,{
+			service:'twitter'
+			,id:'1028454416196747267'
+			,place:'60% 10%'
+		}
+	]
+});
+
+</script>
+
+<h2>Install in 5 minutes!</h2>
+
+<p><a href="https://github.com/joshpowlison/song/releases" target="_blank">Download</a> and put the <em>song</em> folder on your website. Use this HTML:</p>
+
+<pre>
+&lt;script src="song/script.js"&gt;&lt;/script&gt;
+&lt;script&gt;new Song;&lt;/script&gt;
+</pre>
+
+<p>To customize your Song, look at the code below!</p>
+
+<pre>
+&lt;script&gt;
+new Song({
+<span id="code"></span>
+});
+&lt;/script&gt;
+
+<p id="propertyExplanation"></p></pre>
+
+<!--<h2>Used by:</h3>
+<div id="websites-using"><a href="http://gameplanmanga.com" target="_blank"><img src="images/gameplan-banner.jpg"></a></div>
+<p><small>Email me at <a href="mailto:joshuapowlison@gmail.com" target="_blank">joshuapowlison@gmail.com</a> if you want to be included in the list! I will not include NSFW stories.</small></p>-->
+
+<script src="script.js"></script>
+
+</main>
+<footer><p>Continue is Open Source under an MIT License. Version in Demo: DEV BRANCH</p></footer>
+</body>
+</html>

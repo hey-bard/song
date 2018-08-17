@@ -1,0 +1,44 @@
+.song-window{
+	position:relative;
+}
+
+.song-bubble{
+	width:2em;
+	height:2em;
+	position:absolute;
+	border-radius:50%;
+	cursor:pointer;
+	
+	transform:translate(-50%,-50%);
+	
+	border:.1em solid;
+	
+	/*I recommend seting these to the same color!*/
+	background-color:rgba(23,0,236,.18);
+	border-color:rgba(23,0,236,255);
+}
+
+.song-popup{
+	display:none;
+	pointer-events:none;
+	
+	position:absolute;
+	width:20em;
+	transform-origin:0 0;
+}
+
+.song-popup-visible{
+	display:block;
+	pointer-events:auto;
+	
+	animation:song-popup .1s;
+}
+
+@keyframes song-popup{
+	0%{
+		transform:scale(0);
+	}
+	100%{
+		transform:scale(1);
+	}
+}
